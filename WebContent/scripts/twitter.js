@@ -1,4 +1,5 @@
 function readRSS(source,target) {
+	var i;
 	items = source.getElementsByTagName("item");
 	for (i=0;i<items.length;i++) {
 		title = items[i].getElementsByTagName("title")[0].innerHTML;
@@ -18,5 +19,5 @@ function loadRSS(){
 		if(doc.readyState==4) {
 			readRSS(doc.responseXML,layer);
 		}
-	}
+	};
 }
